@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d&nbsp;Floor&nbsp;Plan&nbsp;|&nbsp;HOUSE DESIGN LAB</title>
+    <style>
+    .container {
+        width: 100%;
+        min-height: 150vh;
+        background-color: rgb(243, 248, 248);
+    }
+
+    nav {
+        width: 100%;
+        height: 90px;
+        justify-content: space-between;
+
+        top: 0;
+        display: flex;
+        align-items: center;
+
+        background-color: #fff;
+
+        position: fixed;
+        z-index: 1030;
+
+    }
+
+    .top {
+        padding: 100px;
+    }
+
+    ul {
+        display: flex;
+        padding: 100px;
+    }
+
+    ul li {
+        padding: 10px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        color: rgb(59, 71, 90);
+        font-size: 17px;
+
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: rgb(59, 71, 90);
+    }
+
+    ul li:hover {
+        color: rgb(75, 111, 229);
+        border-bottom: 2px solid #fff;
+        border-color: blue;
+        cursor: pointer;
+
+    }
+
+    ul li a:hover {
+        color: rgb(75, 111, 229);
+    }
+
+    .h a {
+        text-decoration: none;
+        color: rgb(75, 111, 224);
+
+    }
+
+    .h {
+        border-bottom: 2px solid #fff;
+        border-color: blue;
+    }
+
+    .f1 {
+
+        margin-top: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .lio {
+        margin: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: xx-large;
+        font-weight: bolder;
+        font-size: 300%;
+        font-family: "Gill Sans", sans-serif;
+
+    }
+
+    /*.bu{
+list-style: none;
+}
+
+.nav-item{
+display: inline-block;
+}
+.pg{
+margin: 0;
+font-family: inherit;
+font-size: inherit;
+line-height: inherit;
+}*/
+    .f2 {
+        display: inline-block;
+        margin-top: -10px;
+    }
+
+    .it {
+
+        width: 92vw;
+
+    }
+
+    .bt-bu {
+        align-items: center;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin: 30px;
+
+    }
+
+    .bt-bu button {
+        margin: 10;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        margin: 10px;
+
+        border: 1px;
+        background-color: rgb(243, 248, 248);
+        font-size: 20px;
+        font-weight: lighter;
+
+    }
+
+    /*.btn-all {
+        width: 56px;
+        height: 45px;
+        border-radius: 20px;
+        color: #FFF !important;
+        /*background-color: #1977cc !important;
+        border: 1px solid transparent;
+    }*/
+    .btn-all:hover {
+        width: 56px;
+        height: 45px;
+        border-radius: 20px;
+        color: #151414 !important;
+       
+        border: 1px solid black;
+    }
+    .btn-all a{
+        text-decoration: none;
+        color: #151414 !important;
+    }
+    .btn-a2 a{
+        text-decoration: none;
+        color: #151414 !important;
+    }
+    .btn-a2-3df{
+        width: 156px;
+        height: 45px;
+        border-radius: 20px;
+        color: #151414 !important;
+        background-color:#1977cc !important; ;
+        border: 1px solid black;
+    }
+    .btn-a2:hover {
+        width: 156px;
+        height: 45px;
+        border-radius: 20px;
+        color: #151414 !important;
+      
+        border: 1px solid black;
+    }
+    .f7{
+            margin-top: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .d3f {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: large;
+            font-weight: bolder;
+            color: #3d3c3c;
+            font-family: "Gill Sans", sans-serif;
+        }
+
+        .b5 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        .co5 {
+            display: flex;
+
+            justify-content: center;
+            width: 93vw;
+            height: 57vh;
+           /* border: 2px solid black;*/
+            margin: 20px;
+
+            display: grid;
+            grid-template-areas: "bo1" "bo2" "bo3"
+                                 "bo4" "bo5" "bo6" "bo7" "bo8" ;
+            display: flex;
+            flex-wrap: wrap;
+
+            padding: 0px;
+
+            column-gap: 5px;
+            row-gap: -5px;
+        }
+
+        .bxessses1 {
+            width: 310px;
+            height: 212px;
+            grid-area: bo1;
+            background-color: rgb(255, 255, 255);
+            background-image: url(https://i.postimg.cc/G2mtf73y/3a.png);
+            background-size: 100%;
+            background-position: center;
+            border: 0.1px solid rgb(231, 229, 229);
+
+        }
+
+        .bxessses2 {
+            width: 350px;
+            height: 212px;
+            grid-area: bo2;
+            background-color: rgb(255, 255, 255);
+            background-image: url(https://images.suprgenius.com/users/portfolio/Eho1932F_0_1705090074.webp);
+            background-size: 100%;
+            background-position: center;
+            border: 0.1px solid rgb(231, 229, 229);
+
+        }
+
+        .bxessses3 {
+            width: 390px;
+            height: 212px;
+            grid-area: bo3;
+            background-color: rgb(255, 255, 255);
+            background-image: url(https://i.postimg.cc/bwXwHYKW/2a.png);
+            background-size: 100%;
+            background-position: center;
+            border: 0.1px solid rgb(231, 229, 229);
+
+        }
+
+        .bxessses4 {
+            width: 330px;
+            height: 212px;
+            grid-area: bo4;
+            background-color: rgb(255, 255, 255);
+            background-image: url(https://i.postimg.cc/mD4dQ9wk/4a.png);
+            background-size: 100%;
+            background-position: center;
+            border: 0.1px solid rgb(231, 229, 229);
+
+        }
+
+        .bxessses5 {
+            width: 310px;
+            height: 190px;
+            grid-area: bo5;
+            background-color: rgb(255, 255, 255);
+            background-image: url(https://i.postimg.cc/RFKsjRPv/1a.png);
+            background-size: 100%;
+            background-position: center;
+            border: 0.1px solid rgb(231, 229, 229);
+
+        }
+
+        .bxessses6 {
+            width: 350px;
+            height: 190px;
+            grid-area: bo1;
+            background-color: rgb(255, 255, 255);
+            background-image: url(https://i.postimg.cc/bwXwHYKW/2a.png);
+            background-size: 100%;
+            background-position: center;
+            border: 0.1px solid rgb(231, 229, 229);
+
+        }
+
+        .bxessses7 {
+            width: 330px;
+            height: 190px;
+            grid-area: bo1;
+            background-color: rgb(255, 255, 255);
+            background-image: url(https://images.suprgenius.com/users/portfolio/Pho1932T_0_1705089959.webp);
+            background-size: 100%;
+            background-position: center;
+            border: 0.1px solid rgb(231, 229, 229);
+
+        }
+        .bxessses8 {
+            width: 390px;
+            height: 190px;
+            grid-area: bo1;
+            background-color: rgb(255, 255, 255);
+            background-image: url(https://i.postimg.cc/RFKsjRPv/1a.png);
+            background-size: 100%;
+            background-position: center;
+            border: 0.1px solid rgb(231, 229, 229);
+
+        }
+
+    .footer{
+    width: 95.5%;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.95fr 1fr;
+    padding: 36px;
+    color: white;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.footer-item1{
+   height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 10px;
+    padding: 25px;
+    column-rule:5px solid black;
+    border-radius: 50px;
+    margin-top: 70px;
+}
+h4{
+    font-size: 19px;
+    font-weight: bold;
+    color: #444444;
+    position: relative;
+    padding-bottom: 12px;
+    margin-top: 0;
+    margin-bottom: 0.5rem ;
+}
+.footer-item2{
+    column-rule: solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    color: #777777;
+    margin-top: 30px;
+    margin-bottom: 30px ;
+    font-size: 20px;
+   padding: 25px;
+    width: 100%;
+    line-height: 1.5;
+    caption-side: bottom;
+    border-collapse: collapse;
+   
+}
+.footer-item3{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 10px;
+    padding: 15px;
+    column-rule:5px solid black;
+}
+h3{
+   
+    font-size: 20px;
+    font-weight: bold;
+    color: #444444;
+    position: relative;
+    padding-bottom: 12px;
+    margin-top: 0;
+    padding: 30px;
+}
+.tel{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 10px;
+    
+}
+.email{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+   
+    
+}
+.btn-black5{
+   
+   border:white;
+   
+    background-color:white;
+   color: white;
+    border-radius: 5px ;
+    font-size:17px ;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.logo{
+    font-size: 18px;
+    display: inline-block;
+    line-height: 1;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    transition: 0.3s;
+}
+.footer-item4{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 1px;
+    padding: 15px;
+    column-rule:5px solid black;
+}
+h5{
+font-size: 20px;
+font-weight: bold;
+color: #444444;
+position: relative;
+padding-bottom: 12px;
+margin-top: 0;
+padding: 25px;
+}
+
+h6{
+    font-size: 15px;
+    font-weight: bold;
+    color: #444444;
+    position: relative;
+    padding-bottom: 12px;
+    margin-top: 0;
+    padding: 5px;
+}
+h6 a{
+    color: #777777;
+    text-decoration:none;
+}
+.copywrite{
+    width: 100%;
+    height: 10vh;
+   bottom: 0;
+   position: fixed;
+    background-color: #e9f4fd;
+    color: white;
+}
+
+.copywrite{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+.copywrite .co{
+    font-size: large;
+    color:black;
+    margin: 120px;
+}
+.copywrite .pw{
+    font-size: large;
+    color: black;
+    margin: 120px;
+}
+.copywrite .pw a{
+    color: black;
+    font-weight: 600;
+    font-size: x-large;
+    text-decoration: none;
+}
+.whatsapplogo{
+    position: fixed;
+    right: 0px;
+    bottom: 20px;
+ }
+ .btn-black6{
+   
+   border: #e9f4fd;
+   
+    background-color: #e9f4fd;
+   color: white;
+    border-radius: 5px ;
+    font-size:17px ;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+</style>
+</head>
+    <body>
+        <div class="container">
+            <nav>
+                <span class="top"><img src="https://images.suprgenius.com/users/logos/housedesign_UAIW_1704307118.webp"
+                        alt="HOUSE DESIGN LAB" width="80px" alt="" /></span>
+                <ul>
+                    <li class="h"><a href="home.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="Review.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+    
+    
+    
+    
+                </ul>
+            </nav>
+            <section class="f1">
+                <div class="por">
+                    <span class="lio"> Portfolio</span>
+                </div>
+            </section>
+            <section class="f2">
+    
+                <div class="it bt-bu">
+    
+                    <button class="btn-all"><a href="portfolio.html">All</a></button>
+    
+                    <button class="btn-a2"><a href="plan_design.html">2D Plans Designs</a></button>
+    
+    
+                    <button class="btn-a2"><a href="Structural_design.html">Structural Design</a></button>
+    
+                    <button class="btn-a2"><a href="Interior.html">interior</a></button>
+    
+                    <button class="btn-a2"><a href="3d _elevation.html">3D elevation</a> </button>
+    
+                    <button class="btn-a2-3df">3D Floor Plan</button>
+                </div>
+    
+            </section>
+            <section class="f7">
+                <div>
+                    <span class="d3f">3d Floor Plan</span>
+                </div>
+            </section>
+            <section class="b5">
+                <div class="co5">
+                    <div class="im_box3 bxessses1">
+                    </div>
+                    <div class="im_box3 bxessses2">
+                    </div>
+                    <div class="im_box3 bxessses3">
+                    </div>
+                    <div class="im_box3 bxessses4">
+                    </div>
+                    <div class="im_box3 bxessses5">
+                    </div>
+                    <div class="im_box3 bxessses6">
+                    </div>
+                    <div class="im_box3 bxessses7">
+                    </div>
+                    <div class="im_box3 bxessses8">
+                </div>
+                
+            </section>
+            <section class="footer">
+                <div class="footer-item1">
+                  <img src="https://images.suprgenius.com/users/logos/housedesign_UAIW_1704307118.webp" alt=""/>
+        
+                </div>
+                <div class="footer-item2">
+                     <h4>Business Hours</h4>
+                     <table cellpadding="8" class="tb">
+                      <tbody>
+                        <tr style="color: #777777;">
+                          <td align="left"> Monday </td>
+                          <td align="right">09:00 - 18:00</td>
+                        </tr>
+                        <tr style="color: #777777;">
+                          <td align="left"> Tuesday </td>
+                          <td align="right">09:00 - 18:00</td>
+                        </tr>
+                        <tr style="color: #777777;">
+                          <td align="left"> Wednesday </td>
+                          <td align="right">09:00 - 18:00</td>
+                        </tr>
+                        <tr style="color: #777777;">
+                          <td align="left"> Thursday </td>
+                          <td align="right">09:00 - 18:00</td>
+                        </tr>
+                        <tr style="color: #777777;">
+                          <td align="left"> Friday </td>
+                          <td align="right">09:00 - 18:00</td>
+                        </tr>
+                        <tr style="color: #777777;">
+                          <td align="left"> Sunday </td>
+                          <td align="right">09:00 - 18:00</td>
+                        </tr>
+                      </tbody>
+        
+                     </table>
+                </div>
+                <div class="footer-item3">
+                  <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact</h3>
+                  <p class="tel">
+                    <a style="color: #777777; text-decoration: none;" href="tel:+917250610725">
+                      <img style="filter: invert(50%) sepia(5%) saturate(53%) hue-rotate(314deg) brightness(92%) contrast(83%);" width="20" height="20" src="https://images.suprgenius.com/custom-icons/phone-2.svg" alt="Call">&nbsp;&nbsp;917250610725&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                    </a>
+                  </p>
+                  <p class="email">
+                    <a style="color:#777;text-decoration:none;" href="mailto:info.housedesignlab@gmail.com">
+                       <img style="filter: invert(50%) sepia(5%) saturate(53%) hue-rotate(314deg) brightness(92%) contrast(83%);" width="20" height="18" src="https://images.suprgenius.com/custom-icons/mail.svg" alt="Mail"> info.housedesignlab@gmail.com <br></a>
+                </p>
+               
+                <div class="logo">
+                <button  class="btn-black5"><a href="https://wa.me/917250610725?text=Hi, I would like to book a consultation."><img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" width="36px" height="40px"/></a></button>
+         
+                 <img src="https://1000logos.net/wp-content/uploads/2017/02/Facebook-Logosu.png"width="46px" height="30px" alt="">
+                 <img style="border-radius: 90%;" src="https://thumbs.dreamstime.com/b/rounded-instagram-logo-web-print-transparent-white-background-use-printing-purpose-165758567.jpg" width="30px" height="30px"alt="">
+                 <img style="border-radius: 240px;" src="https://i.pinimg.com/736x/98/ae/15/98ae159aa1bb8b4243fbe1f9e27d1b9f.jpg" width="50px" height="50px"alt="">
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+              </div>
+              <div class="footer-item4">
+                    <h5>Usefull Links</h5>
+                    <h6><a href="home.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn-icons-png.flaticon.com/512/3593/3593491.png" width="10px" height="10px">&nbsp;Home</a></h6>
+                    <h6><a href="portfolio.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn-icons-png.flaticon.com/512/3593/3593491.png" width="10px" height="10px">&nbsp;Portfolio</a></h6>
+                    <h6><a href="services.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn-icons-png.flaticon.com/512/3593/3593491.png"width="10px" height="10px">&nbsp;Services</a></h6>
+                    <h6><a href="Review.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn-icons-png.flaticon.com/512/3593/3593491.png"width="10px" height="10px" alt="">&nbsp;Review</a></h6>
+              </div>
+            </section>
+            <section class="copywrite">
+              <div class="co">
+                @copywriteHOUSE DESIGN LAB. All Rights Reserved
+              </div>
+              <span class="pw">Powered by&nbsp;&nbsp;
+                 <a href="">SUPRGENIUS</a></span>
+        
+            </section>
+            <div class="whatsapplogo">
+              <div class="im">
+                <button class="btn-black6"><a href="https://wa.me/917250610725?text=Hi, I would like to book a consultation."><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" width="52" height="53"/></a></button>
+              </div>
+            </div>
+            
+       
+        </div>
+   </body>
+</html>
